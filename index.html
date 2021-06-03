@@ -14,7 +14,38 @@
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script> -->
+		<script src="https://kit.fontawesome.com/dadc560a6e.js" crossorigin="anonymous"></script>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		@media only screen and (max-width: 10000px) 
+			{
+				.imglogo {
+					height: 10vw;
+					transform: translate(-5vw,-5vw);
+				}
+			}
+			@media only screen and (max-width: 1000px) 
+			{
+				.imglogo {
+					height: 20vw;
+					transform: translate(-10vw,-10vw);
+				}
+			}
+			@media only screen and (max-width: 600px) 
+			{
+				.imglogo {
+					height: 20vw;
+					transform: translate(-8vw);
+				}
+			}
+			#header .logo {
+				width: 5.5rem;
+				height: 5.5rem;
+				line-height: 5.5rem;
+				border: solid 1px transparent!important;
+				border-radius: 100%;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -24,8 +55,8 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<!-- <span class="icon fa-gem"></span> -->
-							<img src="images/logosinfondo.png"/>
+						 <!--<span class="icon fa-gem"></span> -->
+							<img class="imglogo" src="images/logosinfondo.png"/>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -40,7 +71,8 @@
 								<li><a href="#intro">Nosotros</a></li>
 								<li><a href="#work">SERVICIOS</a></li>
 								<li><a href="#about">PROTOCOLO</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a href="#contact">Contáctanos</a></li>
+								
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
@@ -64,11 +96,7 @@
 										<li><b>Precio Justo</b> Mediante la mejora continua en nuestros procesos, logramos la eficiencia de nuestros costos.</li>
 										<li><b>Experiencia</b>  Con mas de 55 años en el mercado, garantizamos a nuestros clientes un servicio seguro.</li>
 									</ul>
-								<p>OBJETIVOS
-
-									Proporcionar Auxilio Vial Inmediato, brindando un servicio de excelencia con trato personalizado.
-									Satisfacer las necesidades de nuestros clientes trasladando todo tipo de vehículos a nivel nacional.
-									Respaldar nuestros servicios con la mas alta tecnología, seguridad y capacitación..</p>
+								
 							</article>
 
 						<!-- Work -->
@@ -108,35 +136,27 @@
 
 						<!-- Contact -->
 							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								<h2 class="major">Contáctanos </h2>
+								<h2>En facebook y en instagram!</h2>
+								<span class="image main"><img src="images/contact.jpg" alt="" /></span>
+								<table>
+									<th>
+										<td><h5 style="font-size:1.7rem">Tel</h5></td>
+										<td>
+											<h5 style="font-size:1.7rem"><a href="tel:8183193000" >81-8319-3000</a></h5>
+										</td>
+									</th>									
+								</table>
+								
+								<ul class="icons" style="padding-left:40%">
+									
+									<li style="margin-right:10%"><a href="https://www.facebook.com/GarageYTalleres" class="icon brands fa-facebook-f" style="scale:2"><span class="label">Facebook</span></a></li>
+									
+									<li><a href="https://www.instagram.com/garageytalleres/" class="icon brands fa-instagram" style="scale:2"><span class="label">Instagram</span></a></li>
+									
 								</ul>
 							</article>
-
+				
 						<!-- Elements -->
 							<article id="elements">
 								<h2 class="major">Elements</h2>
@@ -196,8 +216,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									<h4>Icons</h4>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="https://www.facebook.com/GarageYTalleres" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/garageytalleres/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
 									</ul>
 
@@ -399,12 +419,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/main.js"></script>
 <script>
 
-$('#header').on('click', function() {
 
-	console.log("i");
-	console.log(this);
-				$("#bg").toggleClass('cl1');
-			});
 	
 
 		// A $( document ).ready() block.
