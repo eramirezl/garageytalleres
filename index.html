@@ -20,23 +20,46 @@
 		@media only screen and (max-width: 10000px) 
 			{
 				.imglogo {
-					height: 10vw;
-					transform: translate(-5vw,-5vw);
+					width: 23vw;
+					/* transform: translate(-5vw,-5vw); */
 				}
 			}
-			@media only screen and (max-width: 1000px) 
+			@media only screen and (max-width: 1700px) 
 			{
 				.imglogo {
-					height: 20vw;
-					transform: translate(-10vw,-10vw);
+					width: 40vw;
+					
 				}
 			}
 			@media only screen and (max-width: 600px) 
 			{
 				.imglogo {
-					height: 20vw;
-					transform: translate(-8vw);
+					width: 45vw;					
 				}
+			}
+			@keyframes mymove {
+				0%   {opacity: 0;} 
+				60%  {opacity: 0.8;}
+				70%   {opacity: 0.8;} 
+			100% {opacity:0;}
+			}
+
+			@keyframes mymove1 {
+				0%   {transform: translate(10vw,0vw); opacity: 0;}
+				40% {transform: translate(0vw,0vw); opacity: 1;}
+				60% {transform: translate(0vw,0vw); opacity: 0.8;}
+				100% {transform: translate(-80vw,0vw);opacity: 0;}
+			}
+
+			
+			.act{
+			
+				animation: mymove1 10s infinite;	
+				
+			}
+			.logos{
+				height: 25vw;
+				overflow: hidden;
 			}
 			#header .logo {
 				width: 5.5rem;
@@ -54,14 +77,19 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
+						<div class="logos" style="width: 120vw; background-color:#07101a55" >
+							
 						 <!--<span class="icon fa-gem"></span> -->
-							<img class="imglogo" src="images/logosinfondo.png"/>
+							<img id="img1" class="imglogo act" src="images/bg.jpg" width="40vw" />
+							<img id="img2" class="imglogo" src="images/bg1.jpg" width="40vw" style="display:none"/>
+							<img id="img3" class="imglogo" src="images/bg2.jpg" width="40vw" style="display:none"/>
 						</div>
 						<div class="content">
 							<div class="inner">
 								<h1>Garage y talleres</h1>
-								<p>Auxilio Vial Inmediato en mas de 80 ciudades <b>DESDE 1947 </b>
+								<p style="font-size: 1.2rem;"> En Auxilio Vial  Los primeros en llegar! 
+									<br /><br />
+									<b>DESDE 1947 </b>
 									<br />
 							</p>
 							</div>
@@ -94,7 +122,7 @@
 										<li><b>Atención Inmediata</b> Nuestro conmutador de 100 líneas, nos permite atender a nuestros clientes oportunamente.</li>
 										<li><b>Seguridad</b>  Trabajamos con el equipo necesario para cada tipo de vehículo, dando así un servicio confiable.</li>
 										<li><b>Precio Justo</b> Mediante la mejora continua en nuestros procesos, logramos la eficiencia de nuestros costos.</li>
-										<li><b>Experiencia</b>  Con mas de 55 años en el mercado, garantizamos a nuestros clientes un servicio seguro.</li>
+										<li><b>Experiencia</b>  Con mas de <b>73</b> años en el mercado, garantizamos a nuestros clientes un servicio seguro.</li>
 									</ul>
 								
 							</article>
@@ -104,7 +132,7 @@
 								<h2 class="major">SERVICIOS</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>
-									<b>Contamos con </b> Grúas Plataforma - Remolque para el traslado simultaneo de 2,3 y hasta 7 vehículos.
+									Grúas Plataforma - Remolque para el traslado simultaneo de 2,3 y hasta 7 vehículos.
 									Grúas Industriales de hasta 800 toneladas y 80mts. de altura
 									<ul>
 										<li><b>Rapidez</b> Proporcionar Auxilio Vial Inmediato, brindando un servicio de excelencia con trato personalizado.</li>
@@ -424,29 +452,62 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		// A $( document ).ready() block.
 		$( document ).ready(function() {
+
 			setInterval(
-			function(){   
-				console.log("ok");
-				console.log("cl1  "+$("#bg").hasClass("cl1"));
-				console.log("cl2  "+$("#bg").hasClass("cl2"));
-				
-				if(!$("#bg").hasClass("cl1") && !$("#bg").hasClass("cl2") ){
-					$("#bg").addClass('cl1');
-					console.log("1");
-				}
-				else if($("#bg").hasClass("cl1")){
-					$("#bg").removeClass("cl1");
-					$("#bg").addClass("cl2");
-					console.log("2");
-				}
-				else if($("#bg").hasClass("cl2")){
-					$("#bg").removeClass("cl2");
-					$("#bg").removeClass("cl1");
-					console.log("3");
-				}				
-			},
-			10000  /* 10000 ms = 10 sec */
+				function(){   
+					
+					if($("#img1").hasClass("act") ){
+						$("#img1").removeClass("act");
+						$("#img2").addClass("act");
+						$("#img1").hide();
+						$("#img2").show();
+
+						console.log("ban1");
+					}
+					else if($("#img2").hasClass("act") ){
+						$("#img2").removeClass('act');
+						$("#img3").addClass('act');
+						$("#img2").hide();
+						$("#img3").show();
+						console.log("ban2");
+					}
+					else if($("#img3").hasClass("act")){
+						$("#img3").removeClass("act");
+						$("#img1").addClass("act");
+						$("#img3").hide();
+						$("#img1").show();
+						console.log("ban3");
+					}	
+					
+				},
+				10000  /* 10000 ms = 10 sec */
 		);//interval
+		
+		// setInterval(
+		// 		function(){   
+					
+		// 			if(!$("#bg").hasClass("cl1") && !$("#bg").hasClass("cl2") ){
+		// 				$("#bg").addClass('cl1');
+					
+		// 			}
+		// 			else if($("#bg").hasClass("cl1")){
+		// 				$("#bg").removeClass("cl1");
+		// 				$("#bg").addClass("cl2");
+					
+		// 			}
+		// 			else if($("#bg").hasClass("cl2")){
+		// 				$("#bg").removeClass("cl2");
+		// 				$("#bg").removeClass("cl1");
+					
+		// 			}	
+					
+				
+					
+		// 		},
+		// 		20000  /* 10000 ms = 10 sec */
+		// );//interval
+		
+		
 		});//docready
 	</script>
 	

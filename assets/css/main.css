@@ -1,4 +1,4 @@
-@import url(fontawesome-all.min.css);
+/*@import url(fontawesome-all.min.css);*/
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 /*
@@ -1158,17 +1158,18 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg.jpg");
+			background-image: url("../../images/cover.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
-			animation: mymove 10s infinite;
+			/*animation: mymove 20s infinite;*/
 		}
 		
 			@keyframes mymove {
 				0%   {opacity: 0;} 
-				70%   {opacity: 0.9;} 
+				60%  {opacity: 0.8;}
+				70%   {opacity: 0.8;} 
 			100% {opacity:0;}
 			}
 		
@@ -1186,6 +1187,7 @@ input, select, textarea {
 			background-size: cover;
 			background-repeat: no-repeat;
 			z-index: 1;
+			
 		}
 		#bg.cl2:after {
 			-moz-transform: scale(1.125);
@@ -1196,7 +1198,7 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out;
 			-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out;
 			transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
-			background-image: url("../../images/bg2.jpg");
+			background-image: url("../../images/cover.jpg");
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
