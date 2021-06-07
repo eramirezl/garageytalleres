@@ -1240,9 +1240,14 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		position: relative;
-		min-height: 100vh;
+		/*min-height: 100vh;
+		padding: 2rem 2rem;
+		*/
 		width: 100%;
-		padding: 4rem 2rem;
+		padding-left:2rem;
+		padding-right:2rem;
+		padding-top:10px;
+		padding-bottom:1rem;
 		z-index: 3;
 	}
 
@@ -1254,7 +1259,10 @@ input, select, textarea {
 		@media screen and (max-width: 1680px) {
 
 			#wrapper {
-				padding: 3rem 2rem;
+				padding-left:2rem;
+				padding-right:2rem;
+				padding-top:10px;
+				padding-bottom:1rem;
 			}
 
 		}
@@ -1262,7 +1270,11 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding: 2rem 1rem;
+				/*padding: 2rem 1rem;*/
+				padding-left:2rem;
+				padding-right:2rem;
+				padding-top:10px;
+				padding-bottom:1rem;
 			}
 
 		}
@@ -1270,10 +1282,41 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				padding: 1rem;
+				/*padding: 1rem;*/
+				padding-left:2rem;
+				padding-right:2rem;
+				padding-top:10px;
+				padding-bottom:1rem;
 			}
 
 		}
+
+		/*banner
+		@media screen and (max-width: 1680px) {
+
+			#banner {
+				position:absolute; top:-50%; width: 100vw;
+			}
+
+		}*/
+/*
+		@media screen and (max-width: 736px) {
+
+			#banner {
+				
+				position:absolute; top:-20%; width: 100vw;
+			}
+
+		}*/
+/*
+		@media screen and (max-width: 480px) {
+
+			#banner {
+			
+				position:absolute; top:0%; width: 100vw;
+			}
+
+		}*/
 
 /* Header */
 

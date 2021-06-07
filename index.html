@@ -9,26 +9,55 @@
 		<title>Garage y talleres</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!-- <script
+	 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script> -->
+        crossorigin="anonymous"></script> 
+
+		
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+JS
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+		
 		<script src="https://kit.fontawesome.com/dadc560a6e.js" crossorigin="anonymous"></script>
+
+		
+
+		
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-		@media only screen and (max-width: 10000px) 
+			@media only screen and (max-width: 10000px) 
 			{
 				.imglogo {
 					width: 23vw;
 					/* transform: translate(-5vw,-5vw); */
 				}
+				#avatar{
+					width: 45vw;
+				}
 			}
 			@media only screen and (max-width: 1700px) 
 			{
 				.imglogo {
-					width: 40vw;
-					
+					width: 40vw;					
+				}
+				#avatar{
+					width: 65vw;
+
+				}
+			}
+			@media only screen and (max-width: 1300px) 
+			{
+				.imglogo {
+					width: 40vw;					
+				}
+				#avatar{
+					width: 85vw;
+
 				}
 			}
 			@media only screen and (max-width: 600px) 
@@ -36,12 +65,15 @@
 				.imglogo {
 					width: 45vw;					
 				}
+				#avatar{
+					width: 100vw;
+				}
 			}
 			@keyframes mymove {
 				0%   {opacity: 0;} 
 				60%  {opacity: 0.8;}
 				70%   {opacity: 0.8;} 
-			100% {opacity:0;}
+			    100% {opacity:0;}
 			}
 
 			@keyframes mymove1 {
@@ -52,11 +84,7 @@
 			}
 
 			
-			.act{
 			
-				animation: mymove1 10s infinite;	
-				
-			}
 			.logos{
 				height: 25vw;
 				overflow: hidden;
@@ -68,6 +96,25 @@
 				border: solid 1px transparent!important;
 				border-radius: 100%;
 			}
+
+			#avatar {
+				/* This image is 687 wide by 1024 tall, similar to your aspect ratio */
+				background-image: url('images/baner1.jpg');				
+				/* make a square container */
+				/*width: 85vw;*/
+				height: 34vh;
+				/* fill the container, preserving aspect ratio, and cropping to fit */
+				background-size: cover;
+				/* center the image vertically and horizontally */
+				background-position: center center;
+			
+				animation: mymove1 7s infinite;					
+			
+			}
+
+		
+			
+
 		</style>
 	</head>
 	<body class="is-preload">
@@ -76,14 +123,19 @@
 			<div id="wrapper">
 
 				<!-- Header -->
+				
 					<header id="header">
-						<div class="logos" style="width: 120vw; background-color:#07101a55" >
+						<div class="sc" id="avatar">									
+						</div>
+						 <!--<div class="logos" id="avatar" style="width: 120vw; background-color:#07101a55" >
 							
-						 <!--<span class="icon fa-gem"></span> -->
+						<span class="icon fa-gem"></span> 
 							<img id="img1" class="imglogo act" src="images/bg.jpg" width="40vw" />
 							<img id="img2" class="imglogo" src="images/bg1.jpg" width="40vw" style="display:none"/>
 							<img id="img3" class="imglogo" src="images/bg2.jpg" width="40vw" style="display:none"/>
-						</div>
+							
+						</div>-->
+						
 						<div class="content">
 							<div class="inner">
 								<h1>Garage y talleres</h1>
@@ -439,8 +491,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- BG -->
 			<div id="bg"></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<!-- Scripts 
+			<script src="assets/js/jquery.min.js"></script>-->
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
@@ -452,6 +504,20 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 		// A $( document ).ready() block.
 		$( document ).ready(function() {
+
+
+		
+					$('.sliderc').slick({
+						adaptiveHeight:true,
+						autoplay:true,
+						autoplaySpeed:5000,
+						arrows:true,
+						draggable:true,
+						dots:true,
+						infinite:true
+					});
+				
+
 
 			setInterval(
 				function(){   
@@ -481,31 +547,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					
 				},
 				10000  /* 10000 ms = 10 sec */
-		);//interval
+		);
+		//interval
 		
-		// setInterval(
-		// 		function(){   
+		 setInterval(
+		 		function(){   					
+		 			if(!$("#avatar").hasClass("cl1") && !$("#avatar").hasClass("cl2") ){
+						$("#avatar").addClass("cl1");
+						$("#avatar").css("background-image", "url(images/baner2.jpg)");			
+		 			}
+		 			else if($("#avatar").hasClass("cl1")){
+		 				$("#avatar").removeClass("cl1");
+		 				$("#avatar").addClass("cl2");
+					    $("#avatar").css("background-image", "url(images/baner3-min.jpg)");							
+		 			}
+		 			else if($("#avatar").hasClass("cl2")){
+		 				$("#avatar").removeClass("cl2");
+		 				$("#avatar").removeClass("cl1");
+						 $("#avatar").css("background-image", "url(images/baner1.jpg)");		
+		 			}			
 					
-		// 			if(!$("#bg").hasClass("cl1") && !$("#bg").hasClass("cl2") ){
-		// 				$("#bg").addClass('cl1');
-					
-		// 			}
-		// 			else if($("#bg").hasClass("cl1")){
-		// 				$("#bg").removeClass("cl1");
-		// 				$("#bg").addClass("cl2");
-					
-		// 			}
-		// 			else if($("#bg").hasClass("cl2")){
-		// 				$("#bg").removeClass("cl2");
-		// 				$("#bg").removeClass("cl1");
-					
-		// 			}	
-					
-				
-					
-		// 		},
-		// 		20000  /* 10000 ms = 10 sec */
-		// );//interval
+		 		},
+		 		7000  /* 10000 ms = 10 sec */
+		 );//interval
 		
 		
 		});//docready
