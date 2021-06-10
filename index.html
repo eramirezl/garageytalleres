@@ -60,6 +60,27 @@ JS
 
 				}
 			}
+			@media only screen and (max-width: 800px) 
+			{
+				.imglogo {
+					width: 45vw;					
+				}
+				#avatar{
+					width: 100vw;
+					height: 35vh!important;					
+				}
+			}
+			@media only screen and (max-width: 800px) and(max-height: 500px) 
+			{
+				.imglogo {
+					width: 45vw;					
+				}
+				#avatar{
+					width: 65vw;
+					height: 55vh!important;
+					margin-top: -30px!important;
+				}
+			}
 			@media only screen and (max-width: 600px) 
 			{
 				.imglogo {
@@ -67,6 +88,8 @@ JS
 				}
 				#avatar{
 					width: 100vw;
+					height: 20vh!important;
+				
 				}
 			}
 			@keyframes mymove {
@@ -112,7 +135,12 @@ JS
 			
 			}
 
-		
+		.logoDiv{
+			background-image: url('images/typo.png');								
+			height: 12vh;			
+			background-size: cover;			
+			background-position: center center;
+		}
 			
 
 		</style>
@@ -133,14 +161,17 @@ JS
 							<img id="img1" class="imglogo act" src="images/bg.jpg" width="40vw" />
 							<img id="img2" class="imglogo" src="images/bg1.jpg" width="40vw" style="display:none"/>
 							<img id="img3" class="imglogo" src="images/bg2.jpg" width="40vw" style="display:none"/>
-							
+							<img src="" style="height:10vh"/>
 						</div>-->
 						
 						<div class="content">
-							<div class="inner">
-								<h1>Garage y talleres</h1>
+							<div class="inner" style="padding-top: 0 !important;">
+								<div class="logoDiv">
+									
+								</div>
+								
 								<p style="font-size: 1.2rem;"> En Auxilio Vial  Los primeros en llegar! 
-									<br /><br />
+									<br />
 									<b>DESDE 1947 </b>
 									<br />
 							</p>
