@@ -1353,7 +1353,7 @@ input, select, textarea {
 			-ms-transition: opacity 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out;
 			position: relative;
-			margin-top: 3.5rem;
+			margin-top: 1.5rem;
 		}
 
 			#header > *:before {
@@ -1364,7 +1364,8 @@ input, select, textarea {
 				left: calc(50% - 1px);
 				width: 1px;
 				height: calc(3.5rem + 1px);
-				background: #ffffff;
+				background: transparent;
+				/*Linea organigrama*/
 			}
 
 		#header > :first-child {
@@ -1421,12 +1422,20 @@ input, select, textarea {
 			}
 
 		#header nav ul {
+			/* display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			margin-bottom: 0;
+			list-style: none; */
+
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
 			margin-bottom: 0;
 			list-style: none;
+			/**/
 			padding-left: 0;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
@@ -1545,7 +1554,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 480px) {
+		@media screen and (max-width: 3480px) {/*FIX COLUMNAS */
 
 			#header {
 				padding: 1.5rem 0;
@@ -1577,7 +1586,7 @@ input, select, textarea {
 							height: 3rem;
 							line-height: 3rem;
 							min-width: 0;
-							width: 100%;
+							width: 70vw;
 						}
 
 				#header nav.use-middle:after {

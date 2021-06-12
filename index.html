@@ -77,11 +77,11 @@ JS
 					width: 45vw;					
 				}
 				.logoDiv {
-					height:20vh!important;
+					height:22vh!important;
     				}
 				#avatar{
-					width: 65vw;
-					height: 55vh!important;
+					width: 60vw;
+					height: 60vh!important;
 					margin-top: -30px!important;
 				}
 			}
@@ -131,7 +131,8 @@ JS
 				/*width: 85vw;*/
 				height: 45vh;
 				/* fill the container, preserving aspect ratio, and cropping to fit */
-				background-size: cover;
+				background-size: contain;
+				background-repeat: no-repeat;
 				/* center the image vertically and horizontally */
 				background-position: center center;
 			
@@ -140,10 +141,13 @@ JS
 			}
 
 		.logoDiv{
-			background-image: url('images/typo.png');								
-			height: 12vh;			
-			background-size: cover;			
+			background-image: url('images/lgarage.png');								
+			width: 35vw;			
+			height: 15vh;
+			background-size: contain;
+			background-repeat: no-repeat;
 			background-position: center center;
+			margin-top: -5% !important;
 		}
 			
 
@@ -157,7 +161,8 @@ JS
 				<!-- Header -->
 				
 					<header id="header">
-						<div class="sc" id="avatar">									
+						<div class="logoDiv">
+									
 						</div>
 						 <!--<div class="logos" id="avatar" style="width: 120vw; background-color:#07101a55" >
 							
@@ -170,8 +175,7 @@ JS
 						
 						<div class="content">
 							<div class="inner" style="padding-top: 0 !important;">
-								<div class="logoDiv">
-									
+								<div class="sc" id="avatar">									
 								</div>
 								
 								<p style="font-size: 1.2rem;"> En Auxilio Vial  Los primeros en llegar! 
@@ -197,7 +201,11 @@ JS
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="intro">
+							<article id="intro" style="position: relative;">
+								<img src="images/lgarage.png" width="100px" 
+								style="position: absolute;
+								top: 10px;
+								right: 10%;"/>
 								<h2 class="major">Nosotros</h2>
 								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 								<p> 	
@@ -215,7 +223,11 @@ JS
 							</article>
 
 						<!-- Work -->
-							<article id="work">
+							<article id="work" style="position: relative;">
+								<img src="images/lgarage.png" width="100px" 
+								style="position: absolute;
+								top: 10px;
+								right: 10%;"/>
 								<h2 class="major">SERVICIOS</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>
@@ -247,7 +259,11 @@ JS
 							</article>
 
 						<!-- About -->
-							<article id="about">
+							<article id="about" style="position:relative;">
+								<img src="images/lgarage.png" width="100px" 
+								style="position: absolute;
+								top: 10px;
+								right: 10%;"/>
 								<h2 class="major">PROTOCOLO</h2>
 								<!--<span><img src="images/pic03.jpg" alt="" /></span>-->
 								<iframe  class="image main" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FGarageYTalleres%2Fvideos%2F273608107281082%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"
@@ -265,7 +281,11 @@ JS
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
+							<article id="contact" style="position: relative;">
+								<img src="images/lgarage.png" width="100px" 
+								style="position: absolute;
+								top: 10px;
+								right: 10%;"/>
 								<h2 class="major">Contáctanos </h2>
 								<h2>En facebook y en instagram!</h2>
 								<span class="image main"><img src="images/contact.jpg" alt="" /></span>
@@ -288,7 +308,11 @@ JS
 							</article>
 				
 						<!-- Elements -->
-							<article id="elements">
+							<article id="elements" style="position: relative;">
+								<img src="images/lgarage.png" width="100px" 
+								style="position: absolute;
+								top: 10px;
+								right: 10%;"/>
 								<h2 class="major">Elements</h2>
 
 								<section>
