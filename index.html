@@ -103,12 +103,7 @@ JS
 			    100% {opacity:0;}
 			}
 
-			@keyframes mymove1 {
-				0%   {transform: translate(10vw,0vw); opacity: 0;}
-				40% {transform: translate(0vw,0vw); opacity: 1;}
-				60% {transform: translate(0vw,0vw); opacity: 0.8;}
-				100% {transform: translate(-80vw,0vw);opacity: 0;}
-			}
+		
 
 			
 			
@@ -136,24 +131,42 @@ JS
 				/* center the image vertically and horizontally */
 				background-position: center center;
 			
-				animation: mymove1 10s infinite;		
-				
+						
 			
 			}
-
-		.logoDiv{
-			background-image: url('images/lgarage.png');								
-			width: 50vw;			
-			height: 15vh;
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center center;
-			margin-top: -5% !important;
-		}
+			.cls1{
+				animation: mymove1 7s infinite;		
+			}
+			.cls2{
+				animation: mymove1 7s infinite;			
+			}
+			.cls2{
+				animation: mymove1 7s infinite;			
+			}
+			.cls3{
+				animation: mymove1 7s infinite;			
+			}
+			@keyframes mymove1 {
+				0%   {transform: translate(10vw,0vw); opacity: 0;}
+				40% {transform: translate(0vw,0vw); opacity: 1;}
+				60% {transform: translate(0vw,0vw); opacity: 0.8;}
 			
-.major{
-	margin-top: 10%!important;
-}
+				100% {transform: translate(-50vw,0vw);opacity: 0;}
+			}
+
+			.logoDiv{
+				background-image: url('images/lgarage.png');								
+				width: 50vw;			
+				height: 15vh;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: center center;
+				margin-top: -5% !important;
+			}
+			
+				.major{
+					margin-top: 10%!important;
+				}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -596,56 +609,59 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				
 
 
-			setInterval(
-				function(){   
+		// 	setInterval(
+		// 		function(){   
 					
-					if($("#img1").hasClass("act") ){
-						$("#img1").removeClass("act");
-						$("#img2").addClass("act");
-						$("#img1").hide();
-						$("#img2").show();
+		// 			if($("#img1").hasClass("act") ){
+		// 				$("#img1").removeClass("act");
+		// 				$("#img2").addClass("act");
+		// 				$("#img1").hide();
+		// 				$("#img2").show();
 
-						console.log("ban1");
-					}
-					else if($("#img2").hasClass("act") ){
-						$("#img2").removeClass('act');
-						$("#img3").addClass('act');
-						$("#img2").hide();
-						$("#img3").show();
-						console.log("ban2");
-					}
-					else if($("#img3").hasClass("act")){
-						$("#img3").removeClass("act");
-						$("#img1").addClass("act");
-						$("#img3").hide();
-						$("#img1").show();
-						console.log("ban3");
-					}	
+		// 				console.log("ban1");
+		// 			}
+		// 			else if($("#img2").hasClass("act") ){
+		// 				$("#img2").removeClass('act');
+		// 				$("#img3").addClass('act');
+		// 				$("#img2").hide();
+		// 				$("#img3").show();
+		// 				console.log("ban2");
+		// 			}
+		// 			else if($("#img3").hasClass("act")){
+		// 				$("#img3").removeClass("act");
+		// 				$("#img1").addClass("act");
+		// 				$("#img3").hide();
+		// 				$("#img1").show();
+		// 				console.log("ban3");
+		// 			}	
 					
-				},
-				10000  /* 10000 ms = 10 sec */
-		);
+		// 		},
+		// 		10000  /* 10000 ms = 10 sec */
+		// );
 		//interval
 		
 		 setInterval(
 		 		function(){   					
-		 			if(!$("#avatar").hasClass("cl1") && !$("#avatar").hasClass("cl2") ){
-						$("#avatar").addClass("cl1");
+		 			if(!$("#avatar").hasClass("cls1") && !$("#avatar").hasClass("cls2") ){
+						$("#avatar").addClass("cls1");
+						$("#avatar").removeClass("cls3");
 						$("#avatar").css("background-image", "url(images/baner2.jpg)");			
 		 			}
-		 			else if($("#avatar").hasClass("cl1")){
-		 				$("#avatar").removeClass("cl1");
-		 				$("#avatar").addClass("cl2");
+		 			else if($("#avatar").hasClass("cls1")){
+		 				$("#avatar").removeClass("cls1");
+		 				$("#avatar").addClass("cls2");
 					    $("#avatar").css("background-image", "url(images/baner3-min.jpg)");							
 		 			}
-		 			else if($("#avatar").hasClass("cl2")){
-		 				$("#avatar").removeClass("cl2");
-		 				$("#avatar").removeClass("cl1");
+		 			else if($("#avatar").hasClass("cls2")){
+		 				$("#avatar").removeClass("cls2");
+		 				$("#avatar").removeClass("cls1");
+						 $("#avatar").addClass("cls3");
+
 						 $("#avatar").css("background-image", "url(images/baner1.jpg)");		
 		 			}			
 					
 		 		},
-		 		10000  /* 10000 ms = 10 sec */
+		 		7000  /* 10000 ms = 10 sec */
 		 );//interval
 		
 		
